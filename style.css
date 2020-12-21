@@ -16,6 +16,8 @@
 /* *****general styles***** */
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -27,4 +29,100 @@ body {
   max-width: 1980px;
   min-height: 100vh;
   overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h3.heading {
+  font-size: 1.1rem;
+  padding-bottom: 1.5rem;
+}
+
+/* *****wrapper***** */
+div.wrapper {
+  box-shadow: 0 4px 15px hsla(0, 0%, 0%, 0.1);
+  width: 88%;
+}
+
+div.join,
+div.sign-up,
+div.why-us {
+  padding: 1.5rem;
+}
+
+div.join {
+  background-color: var(--white);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+div.join h2.main-heading {
+  color: var(--cyan);
+  font-size: 1.4rem;
+  padding: 0.5rem 0 1.5rem;
+}
+
+h3.subheading {
+  color: var(--bright-yellow);
+}
+
+p.join-info {
+  color: var(--grayish-blue);
+  line-height: 1.6;
+  padding-bottom: 0.5rem;
+}
+
+div.sign-up {
+  background-color: var(--cyan);
+}
+
+div.sign-up div.price {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+div.sign-up div.price p.cost {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-right: 0.8rem;
+}
+
+div.sign-up div.price p.period {
+  color: hsla(0, 0%, 100%, 0.5);
+}
+
+div.sign-up p.sign-up-info {
+  color: var(--light-gray);
+  padding-bottom: 1.5rem;
+}
+
+div.sign-up button.btn-sign-up {
+  background-color: var(--bright-yellow);
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 4px 12px hsla(0, 0%, 0%, 0.2);
+  color: var(--white);
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 0.8rem;
+  width: 100%;
+}
+
+div.why-us {
+  background-color: hsla(179, 62%, 43%, 0.85);
+}
+
+div.why-us ul.reasons-to-join {
+  list-style-type: none;
+}
+
+div.why-us ul.reasons-to-join li.reason-to-join {
+  color: var(--light-gray);
+  padding-top: 2px;
 }
