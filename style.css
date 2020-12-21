@@ -36,13 +36,14 @@ body {
 
 h3.heading {
   font-size: 1.1rem;
-  padding-bottom: 1.5rem;
+  padding-bottom: 1rem;
 }
 
 /* *****wrapper***** */
 div.wrapper {
   box-shadow: 0 4px 15px hsla(0, 0%, 0%, 0.1);
   width: 88%;
+  max-width: 375px;
 }
 
 div.join,
@@ -116,6 +117,8 @@ div.sign-up button.btn-sign-up {
 
 div.why-us {
   background-color: hsla(179, 62%, 43%, 0.85);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 div.why-us ul.reasons-to-join {
@@ -125,4 +128,37 @@ div.why-us ul.reasons-to-join {
 div.why-us ul.reasons-to-join li.reason-to-join {
   color: var(--light-gray);
   padding-top: 2px;
+}
+
+/* *****media queries***** */
+@media only screen and (min-width: 585px) {
+  div.wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    max-width: 600px;
+  }
+
+  div.join {
+    grid-area: 1 / 1 / auto / span 2;
+  }
+
+  div.sign-up {
+    border-bottom-left-radius: 10px;
+    grid-area: 2 / 1 / auto / 2;
+  }
+
+  div.sign-up button.btn-sign-up {
+    transition: all 0.2s;
+  }
+
+  div.sign-up button.btn-sign-up:hover {
+    filter: brightness(110%);
+  }
+
+  div.why-us {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 10px;
+    grid-area: 2 / 2 / auto / 3;
+  }
 }
